@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Printedworks.org (2) (Backup 1661471598858) (1)</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alatsi&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Black+Ops+One&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Form-Basic-icons.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+<body><script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+    <script src="assets/js/smart-forms.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="https://cdn.rawgit.com/Keyang/node-csvtojson/d41f44aa/browser/csvtojson.min.js"></script>
+    <main id="app"></main>
+
+<script>
+    const url = "https://docs.google.com/spreadsheets/d/1TTbRzcK8EftKsCPYd10gXTHWS8g_1zg_Tj8qKJ8dg6s/export?format=csv"
+    const main = document.querySelector("#app");
+    var idlist=[];
+    var rightNumber
+    fetch(url).then(result=>result.text()).then(function(csvtext) {
+      return csv().fromString(csvtext);
+    }).then(function (csv) {
+      //main.innerHTML = "<code>" + JSON.stringify(csv) + "</code>";
+      csv.forEach(function(row){
+        idlist.push(row.lunchid);
+        main.innerHTML += "<h3>" + row.lunchid + "</h3>";
+        main.innerHTML += "<h3>" + row.TotalHours + "</h3>";
+      });
+    });
+ 	for(var i=0;i<=idlist.length;i++){
+      if(idlist[i]=325338){
+        rightNumber=i;
+        break;
+      };
+    };
+    console.log(rightNumber);
+</script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/pikaday.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+    <script src="assets/js/smart-forms.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
