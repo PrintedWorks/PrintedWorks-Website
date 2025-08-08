@@ -1,0 +1,14 @@
+.carousel-item {
+    width: 1550px;
+    height: 500px;
+    overflow: hidden;
+}
+
+footer.footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.icons {
+  color:#6C4DC2;
+}
